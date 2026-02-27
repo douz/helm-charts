@@ -1,1 +1,101 @@
-<!doctype html><html><body><h1>douz Helm charts</h1></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>douz Helm Charts</title>
+  <style>
+    :root {
+      --bg: #f4f8f6;
+      --card: #ffffff;
+      --text: #12221c;
+      --muted: #4b6359;
+      --accent: #0c8f5a;
+      --line: #d5e3dd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top right, #dff6ea 0%, var(--bg) 60%);
+      line-height: 1.45;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    h1 { margin: 0 0 8px; font-size: 2rem; }
+    p { margin: 0 0 14px; color: var(--muted); }
+    code {
+      background: #eef5f1;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 2px 6px;
+      font-size: 0.95em;
+    }
+    .card {
+      margin-top: 20px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 20px rgba(9, 35, 26, 0.06);
+    }
+    .chart-title {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+    .links a,
+    a.inline {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .links a:hover,
+    a.inline:hover { text-decoration: underline; }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    pre {
+      margin: 12px 0 0;
+      background: #0d1f18;
+      color: #e8fff5;
+      border-radius: 10px;
+      padding: 12px;
+      overflow-x: auto;
+      font-size: 0.92rem;
+    }
+    .meta {
+      margin-top: 26px;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>douz Helm Charts</h1>
+    <p>Central Helm repository for open source charts maintained by <a class="inline" href="https://github.com/douz">@douz</a>.</p>
+    <p>Helm endpoint: <code>https://charts.douz.io</code> · Index file: <a class="inline" href="/index.yaml">index.yaml</a></p>
+
+    <section class="card">
+      <h2 class="chart-title">do-uptime-operator</h2>
+      <p>Kubernetes operator that manages DigitalOcean Uptime monitors and alerts from Ingress annotations.</p>
+      <div class="links">
+        <a href="https://github.com/douz/do-uptime-kubernetes-operator">Source Repo</a>
+        <a href="https://github.com/douz/do-uptime-kubernetes-operator#installation">Installation Docs</a>
+        <a href="https://github.com/douz/do-uptime-kubernetes-operator/tree/main/charts/do-uptime-operator">Chart Source</a>
+      </div>
+      <pre>helm repo add do-uptime-operator https://charts.douz.io
+helm repo update
+helm install do-uptime-operator do-uptime-operator/do-uptime-operator</pre>
+    </section>
+
+    <p class="meta">Add additional charts by publishing from their source repositories into the central <code>douz/helm-charts</code> repo.</p>
+  </main>
+</body>
+</html>
